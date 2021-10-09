@@ -13,7 +13,7 @@ export interface globalModuleTypes {
 
 export interface userModleTypes {
   profile: {
-    id?:string,
+    id?: string,
     avatar?: string,
     nickname?: string,
     account?: string,
@@ -22,7 +22,12 @@ export interface userModleTypes {
   }
 }
 
+export interface categoryModleTypes {
+  list: any
+}
+
 export interface AllStateTypes extends RootStateTypes {
   globalModule: globalModuleTypes;
   userModule: userModleTypes;
+  categoryModule: categoryModleTypes
 }

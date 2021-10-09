@@ -3,6 +3,7 @@ import { createStore, Store, useStore as baseUseStore } from 'vuex'
 import { RootStateTypes, AllStateTypes } from '../store/interface'
 import globalModule from './modules/global'
 import userModule from './modules/user'
+import categoryModule from './modules/category';
 import createPersistedstate from 'vuex-persistedstate'
 
 export const store = createStore<RootStateTypes>({
@@ -15,7 +16,8 @@ export const store = createStore<RootStateTypes>({
   getters: {},
   modules: {
     globalModule,
-    userModule
+    userModule,
+    categoryModule
   },
   plugins: [
     createPersistedstate({
@@ -27,6 +29,6 @@ export const store = createStore<RootStateTypes>({
 
 export const key: InjectionKey<Store<RootStateTypes>> = Symbol('vue-store')
 
-export function useStore<T = AllStateTypes> () {
+export function useStore<T = AllStateTypes>() {
   return baseUseStore<T>(key)
 }

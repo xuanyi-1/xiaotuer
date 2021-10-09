@@ -49,6 +49,8 @@ const store = useStore()
 const profile = computed(() => {
   return store.state.userModule.profile.token
 })
+
+
 </script>
 
 <style scoped lang="less">

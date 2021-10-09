@@ -1,4 +1,4 @@
-export enum topCategory {
+export const topCategory: Array<string> = [
   '居家',
   '美食',
   '服饰',
@@ -8,4 +8,4 @@ export enum topCategory {
   '数码',
   '运动',
   '杂货'
-}
+]
